@@ -4,9 +4,9 @@ spring:
     encoding: UTF-8
 
   datasource:
-    url: # TODO Set connection string  ex. jdbc:mysql://localhost:3306/sample
-    username: # TODO Set username
-    password: # TODO  Set password
+    url: jdbc:mysql://localhost:3306/sample
+    username: root
+    password: root
     driverClassName: com.mysql.jdbc.Driver
 
 mybatis:
