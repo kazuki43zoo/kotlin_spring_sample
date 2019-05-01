@@ -1,0 +1,19 @@
+spring:
+  messages:
+    basename: messages/messages
+    encoding: UTF-8
+
+  datasource:
+    url: # TODO Set connection string  ex. jdbc:mysql://localhost:3306/sample
+    username: # TODO Set username
+    password: # TODO  Set password
+    driverClassName: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/*.xml
+  type-aliases-package: com.example.sample.model
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 30
+    cacheEnabled: false
