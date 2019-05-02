@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}">
     <title>Kotlin Spring Sample</title>
 </head>
 <body>
@@ -10,13 +10,20 @@
 <h1>Model List</h1>
 
 <table>
+    <tr>
+        <th th:text="#{title.id}">No</th>
+        <th th:text="#{title.name}">Name</th>
+        <th th:text="#{title.price}">Price</th>
+        <th th:text="#{title.type}">Type</th>
+        <th th:text="#{title.note}">Note</th>
+    </tr>
     <th:block th:each="model : ${modelList}">
         <tr>
-            <td th:text="${model.id}"></td>
-            <td th:text="${model.name}"></td>
-            <td th:text="${model.price}"></td>
-            <td th:text="${model.type}"></td>
-            <td th:text="${model.toString()}"></td>
+            <td th:text="${model.id}">1</td>
+            <td th:text="${model.name}">Apple</td>
+            <td th:text="${model.price}">150</td>
+            <td th:text="${model.type}">1</td>
+            <td th:text="${model}">SampleModel(id=1, name=Apple, price=150, type=1)</td>
         </tr>
     </th:block>
 </table>
